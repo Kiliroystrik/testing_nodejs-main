@@ -7,8 +7,6 @@ on:
     workflows: ["Node.js CI"]  # Le nom du workflow que vous attendez
     types:
       - completed  # Exécution complète
-    branches-ignore:
-      - main
 jobs:
   Deploy-Preview:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}  # Exécuter uniquement si le workflow Node.js CI est réussi
